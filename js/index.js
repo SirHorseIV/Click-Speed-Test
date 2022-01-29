@@ -20,9 +20,9 @@ class InputHandler {
   constructor() {
     document.addEventListener("mousedown", (event) => {
       let insideCanvas = canvas.contains(event.target);
-      if(insideCanvas) {
+      if(true) {
         if(game) {
-          if (((event.pageX - (button.pos.x + button.radius/2)) ** 2 +
+          if (((event.pageX - canvas.getBoundingClientRect().left + button.radius/2 -(button.pos.x + button.radius/2)) ** 2 +
               ((event.pageY - canvas.getBoundingClientRect().top - window.scrollY + button.radius/2) - (button.pos.y + button.radius/2)) ** 2)
                ** 0.5 < button.radius) {
             button.pos = {
@@ -78,6 +78,7 @@ let button = new Button(GAME_WIDTH, GAME_HEIGHT);
 new InputHandler(button, GAME_WIDTH, GAME_HEIGHT);
 
 function gameLoop(timestamp) {
+  console.log(canvas.getBoundingClientRect().left);
 
   ctx.clearRect(0, 0, GAME_WIDTH, GAME_HEIGHT);
   if (refreshTimer >= 20) {ctx.fillStyle = "#2c2f33"}
