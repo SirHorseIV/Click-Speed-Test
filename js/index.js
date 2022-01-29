@@ -20,7 +20,7 @@ class InputHandler {
   constructor() {
     document.addEventListener("mousedown", (event) => {
       let insideCanvas = canvas.contains(event.target);
-      if(true) {
+      if(insideCanvas) {
         if(game) {
           if (((event.pageX - canvas.getBoundingClientRect().left + button.radius/2 -(button.pos.x + button.radius/2)) ** 2 +
               ((event.pageY - canvas.getBoundingClientRect().top - window.scrollY + button.radius/2) - (button.pos.y + button.radius/2)) ** 2)
