@@ -22,7 +22,7 @@ class InputHandler {
       let insideCanvas = canvas.contains(event.target);
       if(insideCanvas) {
         if(game) {
-          if (((event.pageX - canvas.getBoundingClientRect().left + button.radius/2 -(button.pos.x + button.radius/2)) ** 2 +
+          if (((event.pageX - canvas.getBoundingClientRect().left + button.radius/4 -(button.pos.x + button.radius/2)) ** 2 +
               ((event.pageY - canvas.getBoundingClientRect().top - window.scrollY + button.radius/2) - (button.pos.y + button.radius/2)) ** 2)
                ** 0.5 < button.radius) {
             button.pos = {
