@@ -1,7 +1,7 @@
 class Button {
   constructor(screenWidth, screenHeight) {
     this.canClick = true;
-    this.radius = 20;
+    this.radius = 30;
     this.pos = {
       x: Math.random() * (screenWidth - 100) + 50,
       y: Math.random() * (screenHeight - 100) + 50
