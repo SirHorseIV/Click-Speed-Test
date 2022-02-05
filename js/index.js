@@ -45,7 +45,6 @@ class InputHandler {
             timer = 0;
           }
         }
-        console.log(canvas.getBoundingClientRect().y)
       }
     });
   }
@@ -78,7 +77,6 @@ let button = new Button(GAME_WIDTH, GAME_HEIGHT);
 new InputHandler(button, GAME_WIDTH, GAME_HEIGHT);
 
 function gameLoop(timestamp) {
-  console.log(canvas.getBoundingClientRect().left);
 
   ctx.clearRect(0, 0, GAME_WIDTH, GAME_HEIGHT);
   if (refreshTimer >= 20) {ctx.fillStyle = "#2c2f33"}
